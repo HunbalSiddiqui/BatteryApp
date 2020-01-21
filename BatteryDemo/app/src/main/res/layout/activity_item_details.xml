@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/ImgLinearLayout"
+        app:layout_constraintBottom_toTopOf="@id/ListViewLinearLayout"
+        >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImgLinearLayout"
+        app:layout_constraintBottom_toTopOf="@id/ReasonLinearLayout"
+        android:id="@+id/ListViewLinearLayout">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/DetailsListView"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="513dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/ReasonLinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="This item (is not)/is costly due to wrong architecture...." />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reason:"
+            android:textSize="26dp"
+            android:textColor="@color/colorPrimaryDark"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Submit Your Reason"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/White"/>
+
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="115dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ReasonLinearLayout"-->
+<!--        app:layout_constraintVertical_bias="1.0"-->
+<!--        android:id="@+id/SubmitBtnLinearLayout"-->
+<!--        ></LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
